@@ -1,0 +1,45 @@
+<div class="container">
+  <h1>Quiz</h1>
+  <form action="/admin/submit" method="post" enctype="application/x-www-form-urlencoded">
+    {{#with data}}
+
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Question {{@index}}</h5>
+          <p class="card-text">{{this.question}}</p>
+          
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question{{@index}}" id="q{{@index}}-option1" value="{{this.option1}}">
+              <label class="form-check-label" for="q{{@index}}-option{{@index}}">{{this.option1}}</label>
+            </div>
+          
+                    
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question{{@index}}" id="q{{@index}}-option2" value="{{this.option2}}">
+              <label class="form-check-label" for="q{{@index}}-option{{@index}}">{{this.option2}}</label>
+            </div>
+          
+          
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question{{@index}}" id="q{{@index}}-option3" value="{{this.option3}}">
+              <label class="form-check-label" for="q{{@index}}-option{{@index}}">{{this.option3}}</label>
+            </div>
+          
+          
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question{{@index}}" id="q{{@index}}-option4" value="{{this.option4}}">
+              <label class="form-check-label" for="q{{@index}}-option{{@index}}">{{this.option4}}</label>
+            </div>
+          
+          <div class="mb-3">
+                <input type="text" hidden class="form-control" id="exampleInputAnswer5" name="answer" value="{{this.answer}}">
+            </div>
+
+        </div> 
+      </div>
+    {{/with}}
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
