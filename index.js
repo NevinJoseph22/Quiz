@@ -26,7 +26,7 @@ DB()
 //server creation
 app.listen(process.env.PORT, (err) => {
     if (err)
-        console.log("error occured");
+        console.log("error");
     else
         console.log(`server runing on port ${process.env.PORT} `);
 })
